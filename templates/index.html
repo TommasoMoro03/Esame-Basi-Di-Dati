@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/main.css">
+    <title>Demo torneo di basket</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1 id="select-title">Demo torneo di basket</h1>
+    <label for="procedure-select"><h4 id="select-text">Seleziona un'operazione:</h4></label>
+    <div id="scelte">
+    <select id="procedure-select">
+        <option value="VisualizzaClassificaGironi">Visualizza classifica gironi</option>
+        <option value="DettagliPartita">Visualizza dettagli partite</option>
+        <option value="StatisticheGiocatoriPerSquadra">Visualizza statistiche giocatori</option>
+        <option value="CalendarioPartitePalazzetto">Visualizza partite palazzetto</option>
+        <option value="MediaSpettatoriIncassoPalazzetti">Visualizza incassi palazzetti</option>
+        <option value="SpettatoriAffezionati">Visualizza spettatori più affezionati</option>
+        <option value="DatePatentiniArbitri">Visualizza patentini arbitri</option>
+        <option value="TriplaDoppiaPerPalazzetto">Visualizza triple doppie per palazzetto</option>
+        <option value="GiocatorePerformante">Visualizza giocatori più performanti</option>
+    </select>
+    <div id="squadra-dropdown" class="seconda-scelta" style="display: none;">
+        <label for="squadra-select"><p class="secondo-testo">Seleziona una squadra:</p></label>
+        <select id="squadra-select">
+            <option value="Squadra A1">Squadra A1</option>
+            <option value="Squadra A2">Squadra A2</option>
+            <option value="Squadra A3">Squadra A3</option>
+            <option value="Squadra A4">Squadra A4</option>
+            <option value="Squadra A5">Squadra A5</option>
+            <option value="Squadra A6">Squadra A6</option>
+            <option value="Squadra B1">Squadra B1</option>
+            <option value="Squadra B2">Squadra B2</option>
+            <option value="Squadra B3">Squadra B3</option>
+            <option value="Squadra B4">Squadra B4</option>
+            <option value="Squadra B5">Squadra B5</option>
+            <option value="Squadra B6">Squadra B6</option>
+            <option value="Squadra C1">Squadra C1</option>
+            <option value="Squadra C2">Squadra C2</option>
+            <option value="Squadra C3">Squadra C3</option>
+            <option value="Squadra C4">Squadra C4</option>
+            <option value="Squadra C5">Squadra C5</option>
+            <option value="Squadra C6">Squadra C6</option>
+            <option value="Squadra D1">Squadra D1</option>
+            <option value="Squadra D2">Squadra D2</option>
+            <option value="Squadra D3">Squadra D3</option>
+            <option value="Squadra D4">Squadra D4</option>
+            <option value="Squadra D5">Squadra D5</option>
+            <option value="Squadra D6">Squadra D6</option>
+        </select>
+    </div>
+    <div id="palazzetto-dropdown" class="seconda-scelta" style="display: none;">
+        <label for="palazzetto-select"><p class="secondo-testo">Seleziona un palazzetto:</p></label>
+        <select id="palazzetto-select">
+            <option value="PalaPN">PalaPN</option>
+            <option value="Palasport Gorizia">Palasport Gorizia</option>
+            <option value="PalaTrieste">PalaTrieste</option>
+            <option value="Palazzetto dello Sport">Palazzetto dello Sport</option>
+        </select>
+    </div>
+    <div id="num-patentini-input-div" class="seconda-scelta" style="display: none;">
+        <label for="num-patentini-input"><p class="secondo-testo">Numero di spettatori:</p></label>
+        <input type="number" id="num-patentini-input" min="1" />
+    </div>
+    <div id="num-giocatori-input-div" class="seconda-scelta" style="display: none;">
+        <label for="num-giocatori-input"><p class="secondo-testo">Numero di giocatori da visualizzare:</p></label><br>
+        <input type="number" id="num-giocatori-input" min="1" />
+    </div>
+    </div>
+    <button onclick="sendProcedureCall()" id="esegui">Esegui</button>
+    <div id="result"></div>
+</body>
+</html>
