@@ -14,9 +14,9 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # connessione al database
 def get_db_connection():
     return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="tommytommy",
+        host="***",
+        user="***",
+        password="***",
         database="torneoBasket"
     )
 
